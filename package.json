@@ -1,24 +1,35 @@
 {
   "name": "maxeditor",
   "displayName": "Max Editor",
-  "description": "最大化/恢复编辑器布局",
-  "version": "0.0.1",
+  "description": "Maximize/Restore editor layout - 最大化/恢复编辑器布局",
+  "version": "1.0.0",
   "publisher": "hitangjun",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onStartupFinished"
+  "keywords": [
+    "maximize",
+    "editor",
+    "sidebar",
+    "fullscreen",
+    "vscode",
+    "toggle"
   ],
+  "galleryBanner": {
+    "color": "#1e1e3f",
+    "theme": "dark"
+  },
+  "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
         "command": "maxeditor.toggleMaximize",
-        "title": "最大化/恢复编辑器",
+        "title": "Max Editor: 最大化/恢复编辑器",
         "icon": "$(screen-full)"
       }
     ],
@@ -36,12 +47,6 @@
           "command": "maxeditor.toggleMaximize",
           "group": "navigation",
           "when": "editorTextFocus"
-        }
-      ],
-      "explorer/context": [
-        {
-          "command": "maxeditor.toggleMaximize",
-          "group": "9_cutcopypaste@5"
         }
       ]
     }
