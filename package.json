@@ -1,0 +1,57 @@
+{
+  "name": "maxeditor",
+  "displayName": "Max Editor",
+  "description": "最大化/恢复编辑器布局",
+  "version": "0.0.1",
+  "publisher": "hitangjun",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "maxeditor.toggleMaximize",
+        "title": "最大化/恢复编辑器",
+        "icon": "$(screen-full)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "maxeditor.toggleMaximize",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "maxeditor.toggleMaximize",
+          "group": "navigation",
+          "when": "editorTextFocus"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "maxeditor.toggleMaximize",
+          "group": "9_cutcopypaste@5"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "package": "vsce package --no-dependencies"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitangjun/maxeditor"
+  },
+  "license": "MIT"
+}
