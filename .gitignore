@@ -1,11 +1,9 @@
 ######################################################################
 # Build Tools
-.github
 .agent
 .vscode
 .claude
 .jupyter
-*.md
 claude-code-best-practice-main
 claude.md
 form-create-next

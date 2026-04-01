@@ -2,7 +2,7 @@
   "name": "maxeditor",
   "displayName": "Max Editor",
   "description": "Maximize/Restore editor layout - 最大化/恢复编辑器布局",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "hitangjun",
   "icon": "images/icon.png",
   "engines": {
